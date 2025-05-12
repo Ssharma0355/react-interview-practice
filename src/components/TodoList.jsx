@@ -5,6 +5,7 @@ function TodoList() {
   const [input, setInput] = useState("");
   const [todoList, setTodoList] = useState([]);
     const addTodo=()=>{
+        if(input.trim === "") return; //if the input is empty and also space is not allowed due to .trim()
     const item ={
         id: todoList.length+1 ,
         text: input,
