@@ -8,7 +8,7 @@ function TodoList() {
         if(input.trim === "") return; //if the input is empty and also space is not allowed due to .trim()
     const item ={
         id: todoList.length+1 ,
-        text: input,
+        text: input.trim(), //it will not take space only text
         completion:false
     }//there are three things required for the todo list 
         setTodoList(prev => [...prev, item]); //adding up in setTodoList array with spread operator 
